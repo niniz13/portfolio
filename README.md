@@ -13,7 +13,7 @@ Bienvenue sur le dépôt de mon site portfolio personnel, développé avec **Rea
 ## 📦 Installation
 
 ```bash
-git clone https://github.com/ton-utilisateur/mon-portfolio.git
-cd mon-portfolio
+git clone https://github.com/niniz13/portfolio.git
+cd portfolio
 npm install
 npm run dev

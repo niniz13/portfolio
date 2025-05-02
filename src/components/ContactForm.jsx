@@ -1,5 +1,6 @@
 import React, { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
+import { Box, Typography } from "@mui/material";
 
 const ContactForm = () => {
   const form = useRef();
@@ -10,17 +11,17 @@ const ContactForm = () => {
     e.preventDefault();
     setLoading(true);
     setSuccess(false);
-    
+
     const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID;
     const templateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
     const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
 
     emailjs
       .sendForm(
-        serviceId,      // service id
-        templateId,     // template id
+        serviceId,
+        templateId,
         form.current,
-        publicKey       // public key
+        publicKey
       )
       .then(
         () => {
@@ -36,42 +37,86 @@ const ContactForm = () => {
   };
 
   return (
-    <div className="max-w-xl mx-auto p-6 bg-black rounded-xl shadow-md">
-      <h2 className="text-2xl font-semibold mb-4">Contactez-nous</h2>
-      <form ref={form} onSubmit={sendEmail} className="space-y-4">
+    <Box>
+      <form style={{
+        display: 'flex',
+        flexDirection: 'column',
+        gap: '10px'
+      }}
+        ref={form}
+        onSubmit={sendEmail}>
         <input
+          style={{
+            backgroundColor: '#F3F3F3',
+            padding: '10px 20px',
+            border: 'solid 1px #B4B4B4',
+            borderRadius: '10px',
+            fontFamily: 'Inter, sans-serif',
+            fontSize: '16px',
+            fontWeight: '800',
+            letterSpacing: '-5%',
+          }}
           type="text"
           name="name"
           placeholder="Votre nom"
           required
-          className="w-full border p-2 rounded"
         />
         <input
+          style={{
+            backgroundColor: '#F3F3F3',
+            padding: '10px 20px',
+            border: 'solid 1px #B4B4B4',
+            borderRadius: '10px',
+            fontFamily: 'Inter, sans-serif',
+            fontSize: '16px',
+            fontWeight: '800',
+            letterSpacing: '-5%',
+          }}
           type="email"
           name="reply_to"
           placeholder="Votre email"
           required
-          className="w-full border p-2 rounded"
         />
         <textarea
+          style={{
+            backgroundColor: '#F3F3F3',
+            padding: '10px 20px',
+            border: 'solid 1px #B4B4B4',
+            borderRadius: '10px',
+            resize: 'none',
+            fontFamily: 'Inter, sans-serif',
+            fontSize: '16px',
+            fontWeight: '800',
+            letterSpacing: '-5%',
+          }}
           name="message"
           placeholder="Votre message"
           required
           rows="5"
-          className="w-full border p-2 rounded"
         ></textarea>
         <button
+          style={{
+            cursor: 'pointer',
+            backgroundColor: '#3A3A3A',
+            color: '#FFF',
+            padding: '10px 20px',
+            borderRadius: '10px',
+            resize: 'none',
+            fontFamily: 'Inter, sans-serif',
+            fontSize: '16px',
+            fontWeight: '800',
+            letterSpacing: '-5%',
+          }}
           type="submit"
           disabled={loading}
-          className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700"
         >
           {loading ? "Envoi en cours..." : "Envoyer"}
         </button>
         {success && (
-          <p className="text-green-600 mt-2">Message envoyé avec succès !</p>
+          <Typography>Message envoyé avec succès !</Typography>
         )}
       </form>
-    </div>
+    </Box>
   );
 }
 
