@@ -8,6 +8,7 @@ const MenuItem = ({ url, children }) => {
         <Typography
             onClick={() => navigate(url)}
             sx={{
+                cursor: 'pointer',
                 position: 'relative',
                 display: 'inline-block',
                 fontFamily: 'Inter, sans-serif',

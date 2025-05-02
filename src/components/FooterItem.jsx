@@ -8,6 +8,7 @@ const FooterItem = ({ url, children }) => {
         <Typography
             onClick={() => navigate(url)}
             sx={{
+                cursor: 'pointer',
                 fontFamily: 'Inter, sans-serif',
                 fontSize: '14px',
                 fontWeight: 600,

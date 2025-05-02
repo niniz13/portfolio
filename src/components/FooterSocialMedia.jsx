@@ -4,7 +4,7 @@ const FooterSocialMedia = ({ url, children }) => {
         <a
             href={url}
             style={{
-                cursor: 'none',
+                cursor: 'pointer',
                 fontFamily: 'Inter, sans-serif',
                 fontSize: '14px',
                 fontWeight: 600,
