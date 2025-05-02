@@ -10,13 +10,17 @@ const ContactForm = () => {
     e.preventDefault();
     setLoading(true);
     setSuccess(false);
+    
+    const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID;
+    const templateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
+    const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
 
     emailjs
       .sendForm(
-        "service_kasfv8s",      // service id
-        "template_gkstcm9",     // template id
+        serviceId,      // service id
+        templateId,     // template id
         form.current,
-        "6QW8HJBWPCEehzDhz"       // ppublic key
+        publicKey       // public key
       )
       .then(
         () => {
