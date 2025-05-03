@@ -9,58 +9,63 @@ const Portfolio = () => {
     const pictures = [
         {
             img: 'assets/img/portfolio/portfolio1.webp',
-            title: 'Breakfast',
+            title: 'image de voiture',
 
         },
         {
             img: 'assets/img/portfolio/portfolio2.webp',
-            title: 'Burger',
+            title: 'image de voiture',
         },
         {
             img: 'assets/img/portfolio/portfolio3.webp',
-            title: 'Camera',
+            title: 'image de voiture',
         },
         {
             img: 'assets/img/portfolio/portfolio4.webp',
-            title: 'Coffee',
+            title: 'image de voiture',
         },
         {
             img: 'assets/img/portfolio/portfolio5.webp',
-            title: 'Hats',
+            title: 'image de voiture',
         },
         {
             img: 'assets/img/portfolio/portfolio6.webp',
-            title: 'Honey',
+            title: 'image de voiture',
         },
         {
             img: 'assets/img/portfolio/portfolio7.webp',
-            title: 'Basketball',
+            title: 'image de voiture',
         },
         {
             img: 'assets/img/portfolio/portfolio8.webp',
-            title: 'Fern',
+            title: 'image de voiture',
         },
         {
             img: 'assets/img/portfolio/portfolio9.webp',
-            title: 'Mushrooms',
+            title: 'image de voiture',
         },
         {
             img: 'assets/img/portfolio/portfolio10.webp',
-            title: 'Tomato basil',
+            title: 'image de voiture',
         },
         {
             img: 'assets/img/portfolio/portfolio11.webp',
-            title: 'Sea star',
+            title: 'image de voiture',
         },
         {
             img: 'assets/img/portfolio/portfolio12.webp',
-            title: 'Bike',
+            title: 'image de voiture',
         },
     ];
 
+    const getCols = () => {
+        if (isMobile) return 1;
+        return 3;
+    };
+
     return (
         <Base>
-            <ImageList sx={{ padding: isMobile ? '20px' : '50px 175px', }} variant="masonry" cols={3} >
+            <ImageList sx={{ padding: isMobile ? '20px' : '50px 175px', }} variant="masonry" cols={getCols()} >
                 {pictures.map((item, idx) => (
                     <BlurFade key={item.img} delay={0.25 + idx * 0.05} inView>
                         <ImageListItem key={item.img}>
