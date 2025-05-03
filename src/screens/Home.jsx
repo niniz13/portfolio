@@ -12,7 +12,7 @@ const Home = () => {
 
     const homeProjects = [
         { 
-            imgUrl: "assets/img/homeProject1.jpg", 
+            imgUrl: "assets/img/homeProject1.webp", 
             title: "Kargarden Museum Porsche", 
             description: "Kargarden Museum Porsche is a premium automotive exhibition held at the Jardin d'Albertras " +
             "in Bouc-Bel-Air, showcasing a stunning selection of iconic Porsche models. The event brings together " +
@@ -20,7 +20,7 @@ const Home = () => {
             "legendary German brand." 
         },
         { 
-            imgUrl: "assets/img/homeProject2.jpg", 
+            imgUrl: "assets/img/homeProject2.webp", 
             title: "Top Marques", 
             description: "Top Marques Monaco is one of the world’s most prestigious supercar shows, held in the heart " +
             "of Monte Carlo. The event features an exclusive display of high-end vehicles, including hypercars, luxury " +
@@ -28,7 +28,7 @@ const Home = () => {
             "Principality of Monaco." 
         },
         { 
-            imgUrl: "assets/img/homeProject3.jpg", 
+            imgUrl: "assets/img/homeProject3.webp", 
             title: "GT World Challenge EU", 
             description: "The GT World Challenge Europe at Circuit Paul Ricard is a major event in international GT " +
             "racing, bringing together top manufacturers, elite teams, and world-class drivers. Set on the iconic French " +
@@ -36,7 +36,7 @@ const Home = () => {
             "most powerful GT3 cars on the planet." 
         },
         { 
-            imgUrl: "assets/img/homeProject4.jpg", 
+            imgUrl: "assets/img/homeProject4.webp", 
             title: "Kargarden Museum", 
             description: "Kargarden Museum is an automotive exhibition held at the Jardin d'Albertras in Bouc-Bel-Air, " +
             "featuring a curated selection of classic and modern cars from a variety of iconic brands. The event offers a " +
@@ -64,7 +64,7 @@ const Home = () => {
                     }}
                 >
                     <BlurFade duration={1} delay={0.25 * 0.05} inView>
-                        <Safari imageUrl={"assets/img/home1.jpg"} title={"jeremygross.pictures"} />
+                        <Safari imageUrl={"assets/img/home1.webp"} title={"jeremygross.pictures"} />
                     </BlurFade>
                 </Box>
                 <Box
@@ -77,7 +77,7 @@ const Home = () => {
                     }}
                 >
                     <BlurFade duration={1} delay={0.25 + 1 * 0.05} inView>
-                        <Safari imageUrl={"assets/img/home2.jpg"} title={"jeremygross.pictures"} />
+                        <Safari imageUrl={"assets/img/home2.webp"} title={"jeremygross.pictures"} />
                     </BlurFade>
                 </Box>
                 <Box
@@ -90,7 +90,7 @@ const Home = () => {
                     }}
                 >
                     <BlurFade duration={1} delay={0.75 + 2* 0.05} inView>
-                        <Safari imageUrl={"assets/img/home3.jpg"} title={"jeremygross.pictures"} />
+                        <Safari imageUrl={"assets/img/home3.webp"} title={"jeremygross.pictures"} />
                     </BlurFade>
                 </Box>
             </Box>

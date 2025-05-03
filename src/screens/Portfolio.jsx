@@ -8,52 +8,52 @@ const Portfolio = () => {
 
     const pictures = [
         {
-            img: 'assets/img/portfolio/portfolio1.jpg',
+            img: 'assets/img/portfolio/portfolio1.webp',
             title: 'Breakfast',
 
         },
         {
-            img: 'assets/img/portfolio/portfolio2.jpg',
+            img: 'assets/img/portfolio/portfolio2.webp',
             title: 'Burger',
         },
         {
-            img: 'assets/img/portfolio/portfolio3.jpg',
+            img: 'assets/img/portfolio/portfolio3.webp',
             title: 'Camera',
         },
         {
-            img: 'assets/img/portfolio/portfolio4.jpg',
+            img: 'assets/img/portfolio/portfolio4.webp',
             title: 'Coffee',
         },
         {
-            img: 'assets/img/portfolio/portfolio5.jpg',
+            img: 'assets/img/portfolio/portfolio5.webp',
             title: 'Hats',
         },
         {
-            img: 'assets/img/portfolio/portfolio6.jpg',
+            img: 'assets/img/portfolio/portfolio6.webp',
             title: 'Honey',
         },
         {
-            img: 'assets/img/portfolio/portfolio7.jpg',
+            img: 'assets/img/portfolio/portfolio7.webp',
             title: 'Basketball',
         },
         {
-            img: 'assets/img/portfolio/portfolio8.jpg',
+            img: 'assets/img/portfolio/portfolio8.webp',
             title: 'Fern',
         },
         {
-            img: 'assets/img/portfolio/portfolio9.jpg',
+            img: 'assets/img/portfolio/portfolio9.webp',
             title: 'Mushrooms',
         },
         {
-            img: 'assets/img/portfolio/portfolio10.jpg',
+            img: 'assets/img/portfolio/portfolio10.webp',
             title: 'Tomato basil',
         },
         {
-            img: 'assets/img/portfolio/portfolio11.jpg',
+            img: 'assets/img/portfolio/portfolio11.webp',
             title: 'Sea star',
         },
         {
-            img: 'assets/img/portfolio/portfolio12.jpg',
+            img: 'assets/img/portfolio/portfolio12.webp',
             title: 'Bike',
         },
     ];
