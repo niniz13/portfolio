@@ -58,7 +58,7 @@ const ContactForm = () => {
           }}
           type="text"
           name="name"
-          placeholder="Votre nom"
+          placeholder="Your name"
           required
         />
         <input
@@ -74,7 +74,7 @@ const ContactForm = () => {
           }}
           type="email"
           name="reply_to"
-          placeholder="Votre email"
+          placeholder="Your mail"
           required
         />
         <textarea
@@ -90,7 +90,7 @@ const ContactForm = () => {
             letterSpacing: '-5%',
           }}
           name="message"
-          placeholder="Votre message"
+          placeholder="Your message"
           required
           rows="5"
         ></textarea>
@@ -110,10 +110,10 @@ const ContactForm = () => {
           type="submit"
           disabled={loading}
         >
-          {loading ? "Envoi en cours..." : "Envoyer"}
+          {loading ? "Sending your message..." : "Send message"}
         </button>
         {success && (
-          <Typography>Message envoyé avec succès !</Typography>
+          <Typography>Message has been send !</Typography>
         )}
       </form>
     </Box>

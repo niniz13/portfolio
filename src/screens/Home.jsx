@@ -11,37 +11,37 @@ const Home = () => {
     const isMobile = useMediaQuery(theme.breakpoints.down("md"));
 
     const homeProjects = [
-        { 
-            imgUrl: "assets/img/homeProject1.webp", 
-            title: "Kargarden Museum Porsche", 
+        {
+            imgUrl: "assets/img/homeProject1.webp",
+            title: "Kargarden Museum Porsche",
             description: "Kargarden Museum Porsche is a premium automotive exhibition held at the Jardin d'Albertras " +
-            "in Bouc-Bel-Air, showcasing a stunning selection of iconic Porsche models. The event brings together " +
-            "enthusiasts, collectors, and curious visitors to celebrate the heritage, design, and innovation of the " +
-            "legendary German brand." 
+                "in Bouc-Bel-Air, showcasing a stunning selection of iconic Porsche models. The event brings together " +
+                "enthusiasts, collectors, and curious visitors to celebrate the heritage, design, and innovation of the " +
+                "legendary German brand."
         },
-        { 
-            imgUrl: "assets/img/homeProject2.webp", 
-            title: "Top Marques", 
+        {
+            imgUrl: "assets/img/homeProject2.webp",
+            title: "Top Marques",
             description: "Top Marques Monaco is one of the world’s most prestigious supercar shows, held in the heart " +
-            "of Monte Carlo. The event features an exclusive display of high-end vehicles, including hypercars, luxury " +
-            "sports cars, and cutting-edge automotive innovations — all set against the glamorous backdrop of the " +
-            "Principality of Monaco." 
+                "of Monte Carlo. The event features an exclusive display of high-end vehicles, including hypercars, luxury " +
+                "sports cars, and cutting-edge automotive innovations — all set against the glamorous backdrop of the " +
+                "Principality of Monaco."
         },
-        { 
-            imgUrl: "assets/img/homeProject3.webp", 
-            title: "GT World Challenge EU", 
+        {
+            imgUrl: "assets/img/homeProject3.webp",
+            title: "GT World Challenge EU",
             description: "The GT World Challenge Europe at Circuit Paul Ricard is a major event in international GT " +
-            "racing, bringing together top manufacturers, elite teams, and world-class drivers. Set on the iconic French " +
-            "track in Le Castellet, the race delivers intense action, high-speed battles, and a showcase of some of the " +
-            "most powerful GT3 cars on the planet." 
+                "racing, bringing together top manufacturers, elite teams, and world-class drivers. Set on the iconic French " +
+                "track in Le Castellet, the race delivers intense action, high-speed battles, and a showcase of some of the " +
+                "most powerful GT3 cars on the planet."
         },
-        { 
-            imgUrl: "assets/img/homeProject4.webp", 
-            title: "Kargarden Museum", 
+        {
+            imgUrl: "assets/img/homeProject4.webp",
+            title: "Kargarden Museum",
             description: "Kargarden Museum is an automotive exhibition held at the Jardin d'Albertras in Bouc-Bel-Air, " +
-            "featuring a curated selection of classic and modern cars from a variety of iconic brands. The event offers a " +
-            "unique experience for car enthusiasts, collectors, and families alike, blending automotive heritage with a " +
-            "relaxed outdoor atmosphere." 
+                "featuring a curated selection of classic and modern cars from a variety of iconic brands. The event offers a " +
+                "unique experience for car enthusiasts, collectors, and families alike, blending automotive heritage with a " +
+                "relaxed outdoor atmosphere."
         },
     ];
 
@@ -89,7 +89,7 @@ const Home = () => {
                         zIndex: 3,
                     }}
                 >
-                    <BlurFade duration={1} delay={0.75 + 2* 0.05} inView>
+                    <BlurFade duration={1} delay={0.75 + 2 * 0.05} inView>
                         <Safari imageUrl={"assets/img/home3.webp"} title={"jeremygross.pictures"} />
                     </BlurFade>
                 </Box>
@@ -141,7 +141,7 @@ const Home = () => {
             </Box>
 
             <Box sx={{
-                padding: '50px 0',
+                padding: '50px 0 0',
                 display: 'flex',
                 flexDirection: 'row',
                 flexWrap: 'wrap',
@@ -149,9 +149,29 @@ const Home = () => {
                 alignItems: 'center',
                 gap: '20px'
             }}>
-                {homeProjects.map((item) => (
-                    <HomeProject imgSrc={item.imgUrl} title={item.title} description={item.description}/>
-                ))}
+                <Typography sx={{
+                    width: isMobile ? '80vw' : '50vw',
+                    textAlign: 'center',
+                    fontFamily: 'Inter, sans-serif',
+                    fontSize: '40px',
+                    fontWeight: '800',
+                    letterSpacing: '-5%',
+                    lineHeight: '40px'
+                }}>
+                    My Projects
+                </Typography>
+                <Box sx={{
+                    display: 'flex',
+                    flexDirection: 'row',
+                    flexWrap: 'wrap',
+                    justifyContent: 'center',
+                    alignItems: 'center',
+                    gap: '20px'
+                }}>
+                    {homeProjects.map((item) => (
+                        <HomeProject imgSrc={item.imgUrl} title={item.title} description={item.description} />
+                    ))}
+                </Box>
             </Box>
         </Base>
     )
