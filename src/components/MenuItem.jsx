@@ -4,9 +4,17 @@ import { useNavigate } from "react-router-dom";
 const MenuItem = ({ url, children }) => {
     const navigate = useNavigate();
 
+    const handleClick = () => {
+        if (/^https?:\/\//i.test(url)) {
+            window.open(url, "_blank");
+        } else {
+            navigate(url);
+        }
+    };
+
     return (
         <Typography
-            onClick={() => navigate(url)}
+            onClick={handleClick}
             sx={{
                 cursor: 'pointer',
                 position: 'relative',
