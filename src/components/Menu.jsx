@@ -23,7 +23,7 @@ const Menu = () => {
         { label: "HOME", url: "/" },
         { label: "PORTFOLIO", url: "/portfolio" },
         { label: "CONTACT", url: "/contact" },
-        { label: "SHOP", url: "https://jeremygross.pixieset.com/print-shop/"}
+        { label: "SHOP", url: "https://jeremygross.pixieset.com"}
     ];
 
     return (
