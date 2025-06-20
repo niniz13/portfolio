@@ -1,4 +1,4 @@
-import { SpeedInsights } from "@vercel/speed-insights/next"
+import { SpeedInsights } from "@vercel/speed-insights/react"
 import { Box } from "@mui/material"
 import Menu from "./Menu";
 import Footer from "./Footer";
